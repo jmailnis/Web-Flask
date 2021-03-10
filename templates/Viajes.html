@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Viajes</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'CSS/estilos.css') }}">
+    
+</head>
+<body>
+    <header>
+        <div class="Contenedor">
+            <div class="logo">
+               <img src="{{ url_for('static', filename= 'Imagenes/perfil.jpg') }}" alt="Logo">
+            </div>
+            <!--
+            <div class= "Redes">
+                <img src = "Imagenes/Facebook.jpg" alt = "Facebook" >
+                <img src= "Imagenes/Instagram.jpg" alt = "Instagram">
+            </div>-->
+        </div>
+    </header>
+    <div class="navegacion" >
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">INICIO</a> </li>
+            <li><a href="{{ url_for('agendas') }}">AGENDAS 2021</a>
+            <ul>
+                <li><a href= "{{ url_for('agendas') }}"#Shantilove>Agendas Shantilove 2021</a></li>
+                <li><a href="{{ url_for('agendas') }}" #EmprendeClub>Agendas Emprendeclub 2021</a></li>
+                <li><a href= "{{ url_for('agendas') }}"#AstroLove>Agendas Astrolove 2021</a></li>
+            </ul>
+            </li>
+            <li><a href="{{ url_for('viajes') }}">PARA VIAJES</a> 
+                <ul>
+                    <li><a href= "#Bitacora">Bitacora de Viaje</a></li>
+                    <li><a href= "#Kits">Travel Kits</a></li>
+                    <li><a href= "#TravelTag">Identificadores de Valijas</a></li>
+                </ul>    
+            
+            </li>
+            <li><a href="#">PAPELERIA</a> 
+                <ul>
+                    <li><a href= "#">Diarios de Gratitud</a></li>
+                    <li><a href= "#">Diarios de Creatividad</a></li>
+                    <li><a href= "#">Cuadernos A4</a></li>
+                </ul>             
+            </li>
+            <li><a href="{{ url_for('formulario') }}">CONTACTO</a></li>
+        </ul>
+    </nav>
+    </div>
+    <!--Comienza el contenido-->
+    <div class="Contenido">
+        <main>
+            
+            <h1 class="Titulos">viajeros</h1>
+            <a name = "Bitacora"></a>
+            <h2 class = "SubTitulos"> Bitacora de Viajes </h2>
+            <ul class="Agendas">
+                <li><img src="{{ url_for('static', filename= 'Imagenes/Viajes/bitacora viaje.png') }}" alt="bitacora"> 
+                <p>Bitacora Color Negro - <span>Precio $ 900</span> </p> 
+                <a href="#" class="botoncomprar">Comprar</a></li>
+               <li><img src= "{{ url_for('static', filename= 'Imagenes/Viajes/bitacoracollectmoments.jpg') }}" alt="BitacoraCollet"> 
+                <p>Bitacora Collect Moments - <span>Precio $ 950</span> </p> 
+                <a href="#" class="botoncomprar">Comprar</a></li>
+                <li><img src= "{{ url_for('static', filename= 'Imagenes/Viajes/bitacorahastalavista.jpg') }}" alt="BitacoraHastalaVista"> 
+                <p>Bitacora Hasta la Vista - <span>Precio $ 950</span> </p> 
+                <a href="#" class="botoncomprar">Comprar</a></li>
+            </ul>
+            <a name = "Kits" ></a>
+            <h2 class = "SubTitulos"> Travel Kits </h2>
+            
+            <ul class="Agendas">
+                <li><img src="{{ url_for('static', filename= 'Imagenes/Viajes/Kit de viajes.png') }}" alt="Kits de Viajes"> 
+                    <p>Kit de Viajes Modo Avion - <span>Precio $ 1300</span> </p>
+                    <a href="#" class="botoncomprar">Comprar</a> </li>
+                <li><img src="{{ url_for('static', filename= 'Imagenes/Viajes/Kits de Viaje Worldmap.jpg') }}" alt="Kitworldmap"> 
+                    <p>Kit de Viajes World Map - <span>Precio $ 1300</span> </p>
+                    <a href="#" class="botoncomprar">Comprar</a> </li>
+                <li><img src="{{ url_for('static', filename= 'Imagenes/Viajes/Kits de Viaje Travellers wild.jpg') }}" alt="KitWild"> 
+                    <p>Kit Stay Wild - <span>Precio $ 1300</span> </p>
+                    <a href="#" class="botoncomprar">Comprar</a> </li>
+            <a name = "TravelTag" ></a>
+             <h2 class = "SubTitulos"> Traves Tags </h2>
+        
+                    <ul class="Agendas">
+                        <li><img src= "{{ url_for('static', filename= 'Imagenes/Viajes/travel tag.jpg') }}"alt="TravelTag"> 
+                            <p>Travel Tag Mas Viajes  - <span>Precio $ 560</span> </p>
+                            <a href="#" class="botoncomprar">Comprar</a> </li>
+                        <li><img src="{{ url_for('static', filename= 'Imagenes/Viajes/travel tag arco iris.jpg') }}" alt="ArcoIris"> 
+                            <p>Travel Tag Arco Iris - <span>Precio $ 560</span> </p>
+                            <a href="#" class="botoncomprar">Comprar</a> </li>
+                        <li><img src="{{ url_for('static', filename= 'Imagenes/Viajes/Travel tag yendo.png') }}" alt="Yendo"> 
+                            <p>Trave Tag Yendo - <span>Precio $ 560</span> </p>
+                            <a href="#" class="botoncomprar">Comprar</a> </li>
+            
+
+           
+                
+            
+            
+        </main>
+    </div>
+    <!--Comienza el Footer-->
+    <footer>
+        <div class="contenedor">
+            <div class="nosotros">
+                <h2>Quienes somos</h2>
+                <p>Somos dos amigas que disfrutamos de hacer negocios y ofrecer productos innovadores para la zona de Jesus María y alrededores</p>
+            </div>
+            <div class="Menu"> <!--Pegar el nav-->
+                <nav>
+                    <ul>
+                        <li><a href="{{ url_for('home') }}">INICIO</a> </li>
+                        <li><a href="{{ url_for('agendas') }}">AGENDAS 2021</a> </li>
+                        <li><a href="#">PARA VIAJES</a>  </li>
+                        <li><a href="#">PAPELERIA</a>    </li>
+                        <li><a href="{{ url_for('formulario') }}">CONTACTO</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

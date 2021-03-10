@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'CSS/estilos.css') }}">
+<body>
+    <header>
+        <div class="Contenedor">
+            <div class="logo">
+               <img src="{{ url_for('static', filename= 'Imagenes/perfil.jpg') }}" alt="Logo">
+            </div>
+            <!--
+            <div class= "Redes">
+                <img src = "Imagenes/Facebook.jpg" alt = "Facebook" >
+                <img src= "Imagenes/Instagram.jpg" alt = "Instagram">
+            </div>-->
+        </div>
+    </header>
+    <div class="navegacion" >
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">INICIO</a> </li>
+            <li><a href="{{ url_for('agendas') }}">AGENDAS 2021</a>
+            <ul>
+                <li><a href="{{ url_for('agendas') }}" #Shantilove>Agendas Shantilove 2021</a></li>
+                <li><a href= "{{ url_for('agendas') }}"#EmprendeClub>Agendas Emprendeclub 2021</a></li>
+                <li><a href= "{{ url_for('agendas') }}"#AstroLove>Agendas Astrolove 2021</a></li>
+            </ul>
+            </li>
+            <li><a href="{{ url_for('viajes') }}">PARA VIAJES</a> 
+                <ul>
+                    <li><a href= "{{ url_for('viajes') }}"#Bitacora>Bitacora de Viaje</a></li>
+                    <li><a href= "{{ url_for('viajes') }}"#Kits>Travel Kits</a></li>
+                    <li><a href= "{{ url_for('viajes') }}"#TravelTag>Identificadores de Valijas</a></li>
+                </ul>    
+            
+            </li>
+            <li><a href="#">PAPELERIA</a> 
+                <ul>
+                    <li><a href= "#">Diarios de Gratitud</a></li>
+                    <li><a href= "#">Diarios de Creatividad</a></li>
+                    <li><a href= "#">Cuadernos A4</a></li>
+                </ul>             
+            </li>
+            <li><a href="{{ url_for('formulario') }}">CONTACTO</a></li>
+        </ul>
+    </nav>
+    </div>
+    <!--Comienza el contenido-->
+    <div class="Contenido">
+        <main>
+            <div class="Productos">
+            <h1 class="Titulos">Agendas 2021</h1>
+            
+            <ul class="Agendas">
+                <li><img src="{{ url_for('static', filename= 'Imagenes/Agendas/Agenda 2021 Emprendeclub.jpg') }}" alt="Emprendeclub"> 
+                <p>Modelo Emprende Club - <span>Precio $ 1860</span> </p> </li>
+                <li><img src="{{ url_for('static', filename= 'Imagenes/Agendas/Agenda 2021 Shantilove.jpg') }}" alt="Shantilove">
+                <p>Modelo Shantilove - <span> Precio $ 1770</span> </p>  </li>
+                <li><img src="{{ url_for('static', filename= 'Imagenes/Agendas/Agenda 2021 Astrolove.jpg') }}" alt="Astrolove"> 
+                    <p>Modelo Astrolove - <span> Precio $ 1770</span> </p> </li>
+            </ul>
+                <a href="CatalogoAgendas.html" class="boton">Ver todas las agendas</a>
+            <h1 class="Titulos">Especial Viajeros</h1>
+        
+            <ul class="Agendas">
+                <li><img src="{{ url_for('static', filename= 'Imagenes/Viajes/bitacora viaje.png') }}" alt="Bitacora"> 
+                    <p>Bitacora de Viaje - <span>Precio $ 900</span> </p>  </li>
+                <li><img src="{{ url_for('static', filename= 'Imagenes/Viajes/Kit de viajes.png') }}" alt="Kits"> 
+                    <p>Kits de Viaje - <span>Precio $ 1300</span> </p> </li>
+                <li><img src="{{ url_for('static', filename= 'Imagenes/Viajes/travel tag.jpg') }}"alt="Traveltag">  
+                    <p>Travel Tags - <span>Precio $ 560</span> </p></li>
+            </ul>
+                <a href="Viajes.html" class="boton">Ir a Seccion para viajes</a>
+            <h1 class="Titulos">Lo nuevo en Papeleria</h1>
+            <ul class= "Agendas">
+                <li><img src="{{ url_for('static', filename= 'Imagenes/Papeleria/Bullet Journal mas stickers.png') }}" alt="Bullet"> 
+                    <p>Journal Bullet + Stickers - <span>Precio $ 1050</span> </p> </li>
+                <li><img src="{{ url_for('static', filename= 'Imagenes/Papeleria/Diario de gratitud.png') }}" alt="Gratitud"> 
+                    <p>Diario de Gratitud - <span>Precio $ 900</span> </p> </li>
+                <li><img src="{{ url_for('static', filename= 'Imagenes/Papeleria/Planer semanal.png') }}" alt="Plannersemanal">  
+                    <p>Planner Semanal - <span>Precio $ 780</span> </p> </li>
+            </ul>            
+                <a href="#" class="boton">Ir a Seccion Papeleria</a>
+                
+            
+            </div>
+        </main>
+    </div>
+    <!--Comienza el Footer-->
+    <footer>
+        <div class="contenedor">
+            <div class="nosotros">
+                <h2>Quienes somos</h2>
+                <p>Somos dos amigas que disfrutamos de hacer negocios y ofrecer productos innovadores para la zona de Jesus María y alrededores</p>
+            </div>
+            <div class="Menu"> <!--Pegar el nav-->
+                <nav>
+                    <ul>
+                        <li><a href="{{ url_for('home') }}">INICIO</a> </li>
+                        <li><a href="{{ url_for('agendas') }}">AGENDAS 2021</a> </li>
+                        <li><a href="{{ url_for('viajes') }}">PARA VIAJES</a>  </li>
+                        <li><a href="#">PAPELERIA</a>    </li>
+                        <li><a href="{{ url_for('formulario') }}">CONTACTO</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

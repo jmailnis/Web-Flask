@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendas</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename= 'CSS/estilos.css') }}">
+    <!--<link rel="stylesheet" href="CSS/estilos.css">-->
+</head>
+<body>
+    <header>
+        <div class="Contenedor">
+            <div class="logo">
+               <img src= "{{ url_for('static', filename= 'Imagenes/perfil.jpg') }}"alt="Logo">
+            </div>
+            <!--
+            <div class= "Redes">
+                <img src = "Imagenes/Facebook.jpg" alt = "Facebook" >
+                <img src= "Imagenes/Instagram.jpg" alt = "Instagram">
+            </div>-->
+        </div>
+    </header>
+    <div class="navegacion" >
+    <nav>
+        <ul>
+            <li><a href="{{ url_for('home') }}">INICIO</a> </li>
+            <li><a href="#">AGENDAS 2021</a>
+            <ul>
+                <li><a href= "#Shantilove">Agendas Shantilove 2021</a></li>
+                <li><a href= "#EmprendeClub">Agendas Emprendeclub 2021</a></li>
+                <li><a href= "#AstroLove">Agendas Astrolove 2021</a></li>
+            </ul>
+            </li>
+            <li><a href="{{ url_for('viajes') }}">PARA VIAJES</a> 
+                <ul>
+                    <li><a href= "{{ url_for('viajes') }}"#Bitacora>Bitacora de Viaje</a></li>
+                    <li><a href= "{{ url_for('viajes') }}"#Kits>Travel Kits</a></li>
+                    <li><a href= "{{ url_for('viajes') }}"#TravelTag>Identificadores de Valijas</a></li>
+                </ul>    
+            
+            </li>
+            <li><a href="#">PAPELERIA</a> 
+                <ul>
+                    <li><a href= "#">Diarios de Gratitud</a></li>
+                    <li><a href= "#">Diarios de Creatividad</a></li>
+                    <li><a href= "#">Cuadernos A4</a></li>
+                </ul>             
+            </li>
+            <li><a href="{{ url_for('formulario') }}">CONTACTO</a></li>
+        </ul>
+    </nav>
+    </div>
+    <!--Comienza el contenido-->
+    <div class="Contenido">
+        <main>
+            
+            <h1 class="Titulos">CATALOGO DE AGENDAS 2021</h1>
+            <a name = "EmprendeClub"></a>
+            <h2 class = "SubTitulos"> Emprendeclub 2021 </h2>
+            <ul class="Agendas">
+                <li><img src="{{ url_for('static', filename= 'Imagenes/Agendas/Agenda 2021 Emprendeclub.jpg') }}"  alt="Emprendeclub"> 
+                <p>Modelo Emprende Club - <span>Precio $ 1860</span> </p> 
+                <a href="#" class="botoncomprar">Comprar</a></li>
+               <li><img src= "{{ url_for('static', filename= 'Imagenes/Agendas/EmprendeClub Jefa.jpg') }}"  alt="Jefa"> 
+                <p>Modelo Emprende Club Jefa - <span>Precio $ 1860</span> </p> 
+                <a href="#" class="botoncomprar">Comprar</a></li>
+                <li><img src= "{{ url_for('static', filename= 'Imagenes/Agendas/EmprendeClubPortaAgendas.jpeg') }}"  alt="EmprendePortal"> 
+                <p>Emprende Club + Porta Agendas - <span>Precio $ 1980</span> </p> 
+                <a href="#" class="botoncomprar">Comprar</a></li>
+            </ul>
+            <a name = "Shantilove" ></a>
+            <h2 class = "SubTitulos"> ShantiLove 2021 </h2>
+            
+            <ul class="Agendas">
+                <li><img src= "{{ url_for('static', filename= 'Imagenes/Agendas/Agenda 2021 Shantilove.jpg') }}" alt="Shantilove"> 
+                    <p>Modelo Shantilove - <span>Precio $ 1770</span> </p>
+                    <a href="#" class="botoncomprar">Comprar</a> </li>
+                <li><img src= "{{ url_for('static', filename= 'Imagenes/Agendas/ShantiFeelingGood.jpg') }}" alt="FeelingGood"> 
+                    <p>Modelo Shantilove Feeling Good - <span>Precio $ 1770</span> </p>
+                    <a href="#" class="botoncomprar">Comprar</a> </li>
+                <li><img src="{{ url_for('static', filename= 'Imagenes/Agendas/ShantiIndia.jpg') }}"  alt="Shantiindia"> 
+                    <p>Modelo Shantilove India - <span>Precio $ 1770</span> </p>
+                    <a href="#" class="botoncomprar">Comprar</a> </li>
+            <a name = "AstroLove" ></a>
+             <h2 class = "SubTitulos"> AstroLove 2021 </h2>
+        
+                    <ul class="Agendas">
+                        <li><img src="{{ url_for('static', filename= 'Imagenes/Agendas/Agenda 2021 Astrolove.jpg') }}"  alt="Astrolove"> 
+                            <p>Modelo Astrolove - <span>Precio $ 1770</span> </p>
+                            <a href="#" class="botoncomprar">Comprar</a> </li>
+                        <li><img src="{{ url_for('static', filename= 'Imagenes/Agendas/AstroVerdeAgua.jpg') }}"  alt="AstroVerde"> 
+                            <p>Modelo Astrolove Verde Agua - <span>Precio $ 1770</span> </p>
+                            <a href="#" class="botoncomprar">Comprar</a> </li>
+                        <li><img src="{{ url_for('static', filename= 'Imagenes/Agendas/AstroPortaAgendas.png') }}"  alt="AstroPortaAgendas"> 
+                            <p>Modelo Astrolove + Porta Agendas - <span>Precio $ 1900</span> </p>
+                            <a href="#" class="botoncomprar">Comprar</a> </li>
+            
+
+           
+                
+            
+            
+        </main>
+    </div>
+    <!--Comienza el Footer-->
+    <footer>
+        <div class="contenedor">
+            <div class="nosotros">
+                <h2>Quienes somos</h2>
+                <p>Somos dos amigas que disfrutamos de hacer negocios y ofrecer productos innovadores para la zona de Jesus María y alrededores</p>
+            </div>
+            <div class="Menu"> <!--Pegar el nav-->
+                <nav>
+                    <ul>
+                        <li><a href="{{ url_for('home') }}">INICIO</a> </li>
+                        <li><a href="{{ url_for('agendas') }}">AGENDAS 2021</a> </li>
+                        <li><a href="{{ url_for('viajes') }}">PARA VIAJES</a>  </li>
+                        <li><a href="#">PAPELERIA</a>    </li>
+                        <li><a href="{{ url_for('formulario') }}">CONTACTO</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
